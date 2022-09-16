@@ -1,5 +1,5 @@
 {% set name = "pyapp" %}
-{% set version = "4.8.2" %}
+{% set version = "4.9.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
-  sha256: eb1882450d71af7482406e4729e8491e10021f943bff2fb8e8054ed3221f5467
+  sha256: 69ed56c0b1b7b4e1b58b2a9a850a31d7783b9f6f59b5f9a8256279dc42b30653
 
 build:
   noarch: python
@@ -18,10 +18,10 @@ requirements:
   host:
     - pip
     - poetry >=1.0
-    - python >=3.7,<4.0
+    - python >=3.8,<4.0
     - rtd-poetry
   run:
-    - python >=3.7,<4.0
+    - python >=3.8,<4.0
     - argcomplete
     - colorama
     - yarl
@@ -38,7 +38,7 @@ test:
   requires:
     - pip
     - pytest >=7.1.2
-    - pytest-asyncio >=0.18.3
+    - pytest-asyncio >=0.19
     - nox
 
 about:
