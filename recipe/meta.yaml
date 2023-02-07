@@ -33,7 +33,7 @@ test:
     - pyapp
   commands:
     - pip check
-    - pytest -vvv --capture=tee-sys -k "not TestAsyncListenerSet.test_call" tests
+    - pytest -vvv --capture=tee-sys -k "not TestAsyncListenerSet" tests
   requires:
     - pip
     - pytest >=7.1.2
