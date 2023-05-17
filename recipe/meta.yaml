@@ -19,11 +19,11 @@ requirements:
     - pip
     - poetry >=1.0
     - python >=3.8,<4.0
-    - rtd-poetry
   run:
     - python >=3.8,<4.0
     - argcomplete
     - colorama
+    - importlib_metadata 
     - yarl
 
 test:
