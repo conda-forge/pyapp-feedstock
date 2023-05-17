@@ -1,5 +1,5 @@
 {% set name = "pyapp" %}
-{% set version = "4.12.0" %}
+{% set version = "4.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
-  sha256: c8496c65c98d41d783ff6ec8fbccf106f91c5f582689edc4c71febfdb051fea5
+  sha256: d210af5a77af7eaca87a90b0906dd3468f424c3a14c7f74b264fa82f49d6f537
 
 build:
   noarch: python
@@ -19,11 +19,11 @@ requirements:
     - pip
     - poetry >=1.0
     - python >=3.8,<4.0
-    - rtd-poetry
   run:
     - python >=3.8,<4.0
     - argcomplete
     - colorama
+    - importlib_metadata 
     - yarl
 
 test:
