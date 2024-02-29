@@ -25,6 +25,7 @@ requirements:
     - colorama
     - importlib_metadata
     - yarl
+    - sphinx
 
 test:
   source_files:
