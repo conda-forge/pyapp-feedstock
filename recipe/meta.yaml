@@ -1,5 +1,5 @@
 {% set name = "pyapp" %}
-{% set version = "4.13.1" %}
+{% set version = "4.14" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
-  sha256: af7f714ead25261b23ca265129c1d27e853d4f1c5cb02d847645b5e9fa674e70
+  sha256: 4f0747acda0f8cdd1bce551792980eb2fb618c4d5cd8f3fbddc16ca9ed19e255
 
 build:
   noarch: python
@@ -25,6 +25,7 @@ requirements:
     - colorama
     - importlib_metadata
     - yarl
+    - sphinx
 
 test:
   source_files:
