@@ -1,5 +1,5 @@
 {% set name = "pyapp" %}
-{% set version = "4.14" %}
+{% set version = "4.15.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
-  sha256: 4f0747acda0f8cdd1bce551792980eb2fb618c4d5cd8f3fbddc16ca9ed19e255
+  sha256: 08b7a25138680d90db1f670da24306ba008b4fe022e0d7d638959927a963e152
 
 build:
   noarch: python
