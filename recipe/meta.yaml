@@ -25,7 +25,7 @@ requirements:
     - colorama
     - yarl
     - importlib-metadata
-    - typeing_extensions
+    - typing_extensions
 
 test:
   source_files:
