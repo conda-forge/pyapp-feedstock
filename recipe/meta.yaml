@@ -1,13 +1,14 @@
 {% set name = "pyapp" %}
-{% set version = "4.16" %}
+{% set version = "4.16.1" %}
+{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
-  sha256: 0247b8f074bdbb9ac8719a8c1bda59ea4668085ac0d409b262c6699c30dee7aa
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyapp-{{ version }}.tar.gz
+  sha256: 48d52bc2a2f0a676dbdc71b4e78d59f88f0da31bfd1badde5d60476bb479ad54
 
 build:
   noarch: python
@@ -17,11 +18,11 @@ build:
 requirements:
   host:
     - pip
-    - poetry-core >=1.0
-    - python >=3.10,<4.0
+    - poetry-core >=1.0.0
+    - python {{ python_min }}
   run:
-    - python >=3.10,<4.0
-    - argcomplete >=3.2,<4.0
+    - python >={{ python_min }}
+    - argcomplete >=3.2.0,<4.0.0
     - colorama
     - yarl
     - importlib-metadata
@@ -41,6 +42,7 @@ test:
     - pytest-asyncio >=0.19
     - nox
     - sphinx
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyapp-org/pyapp
